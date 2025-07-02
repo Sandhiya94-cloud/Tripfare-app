@@ -1,11 +1,10 @@
 import streamlit as st
 import numpy as np
-import pickle
+import joblib
 from datetime import datetime
 
-# Load the trained model
-with open('model.pkl', 'rb') as f:
-    model = pickle.load(f)
+# Load the trained model using joblib
+model = joblib.load('model.pkl')
 
 st.title("🚕 NYC Taxi Fare Predictor")
 
